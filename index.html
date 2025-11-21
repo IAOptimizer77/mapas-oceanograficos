@@ -1,0 +1,92 @@
+"""
+
+index_html = '''<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas Oceanográficos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌊 Mapas Oceanográficos</h1>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">💨</div>
+                <h2>Viento</h2>
+                <p>Velocidad y dirección</p>
+                <a href="mapa_viento.html" class="btn">Ver Mapa</a>
+            </div>
+            <div class="card">
+                <div class="icon">🌊</div>
+                <h2>Olas</h2>
+                <p>Altura y dirección</p>
+                <a href="mapa_olas.html" class="btn">Ver Mapa</a>
+            </div>
+            <div class="card">
+                <div class="icon">🔄</div>
+                <h2>Corrientes</h2>
+                <p>Velocidad y patrones</p>
+                <a href="mapa_corrientes.html" class="btn">Ver Mapa</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>'''
